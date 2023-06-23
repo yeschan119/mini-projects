@@ -4,7 +4,7 @@
 class Marine {
     int physical;     // marine physical
     int pos_x, pos_y; // marine position
-    int damage;   // attack power
+    const int damage;   // attack power
     bool is_dead;
     char *name;    // marine name
 
@@ -19,21 +19,17 @@ class Marine {
         void show_status();
 };
 
-Marine::Marine() {
-    physical = 50;
-    pos_x = pos_y = 0;
-    damage = 5;
-    is_dead = false;
-}
+//이렇게 initialize list로 초기화 하면 생성과 동시에 초기화가 진행되므로 좀 더 효율적이다.
+Marine::Marine()
+    : physical(50), pos_x(0), pos_y(0), damage(5), is_dead(false) {
+        name = new char[strlen("marine") + 1];
+        strcpy(name, "marine");
+    }
 
-Marine::Marine(int x, int y, const char* marine_name) {
+Marine::Marine(int x, int y, const char* marine_name)
+    : physical(50), pos_x(x), pos_y(y), damage(5), is_dead(false) {
     name = new char[strlen(marine_name) + 1];
     strcpy(name, marine_name);
-    pos_x = x;
-    pos_y = y;
-    physical = 50;
-    damage = 5;
-    is_dead = false;
 }
 
 int Marine::attack() {return damage;}
@@ -63,13 +59,13 @@ Marine::~Marine() {
 int main() {
     Marine* marines[100];
 
-    marines[0] = new Marine(2, 3, "Marine 2");
-    marines[1] = new Marine(3, 5, "Marine 1");
+    marines[0] = new Marine(2, 3, "Marine 5");
+    marines[1] = new Marine(3, 5, "Marine 2");
 
     marines[0]->show_status();
     marines[1]->show_status();
 
-    std::cout << std::endl << "마린 1 이 마린 2 를 공격! " << std::endl;
+    std::cout << std::endl << "마린 2가 마린 5 를 공격! " << std::endl;
 
     marines[0]->be_attacked(marines[1]->attack());
 
