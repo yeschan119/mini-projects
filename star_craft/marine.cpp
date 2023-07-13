@@ -20,6 +20,8 @@ class Marine {
 };
 
 //이렇게 initialize list로 초기화 하면 생성과 동시에 초기화가 진행되므로 좀 더 효율적이다.
+//생성과 동시에 초기화를 하면 int a = 10;과 같은 형태인데 만일 타입이 클래스일 경우 이렇게 하는 게 효과적임.
+//또한 클래스 내부에 reference나 상수를 넣고 싶다면 무조건 초기화 리스트를 사용해서 초기화 시켜주어야 함
 Marine::Marine()
     : physical(50), pos_x(0), pos_y(0), damage(5), is_dead(false) {
         name = new char[strlen("marine") + 1];
