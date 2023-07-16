@@ -18,7 +18,7 @@ class Marine {
         Marine(int x, int y, const char *marine_name);
         ~Marine();
 
-        int attack();
+        int attack() const;
         Marine& be_attacked(int damage);
         void move(int x, int y);
         void show_status();
@@ -50,7 +50,10 @@ Marine::Marine(int x, int y, const char* marine_name)
     total_marine_num++;
 }
 
-int Marine::attack() {return damage;}
+//상수 멤버 함수
+//상수 멤버 함수는 다르 변수의 값을 바꾸지 않는다는 것을 명시
+//상수함수 내에서는 객체들의 읽기만 수행. 상수함수 내에서 호출할 수 있는 함수로는 다른 상수함수밖에 없음.
+int Marine::attack() const {return damage;}
 Marine& Marine::be_attacked(int damage) {
     physical -= damage;
     if (physical <= 0)
