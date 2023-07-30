@@ -15,7 +15,7 @@ class Marine {
 
     public:
         Marine();
-        Marine(int x, int y, const char *marine_name);
+        Marine(int x, int y, const char *marine_name, int default_damage);
         ~Marine();
 
         int attack() const;
@@ -43,8 +43,8 @@ Marine::Marine()
         total_marine_num++;
     }
 
-Marine::Marine(int x, int y, const char* marine_name)
-    : physical(50), pos_x(x), pos_y(y), damage(5), default_damage(10), is_dead(false) {
+Marine::Marine(int x, int y, const char* marine_name, int default_damage)
+    : physical(50), pos_x(x), pos_y(y), damage(5), default_damage(default_damage), is_dead(false) {
     name = new char[strlen(marine_name) + 1];
     strcpy(name, marine_name);
     total_marine_num++;
@@ -86,9 +86,9 @@ void create_marine(Marine* marines, int i) {
 int main() {
     Marine* marines[100];
 
-    marines[0] = new Marine(2, 3, "Marine 5");
-    marines[1] = new Marine(3, 5, "Marine 2");
-    marines[2] = new Marine(5, 5, "Marine 3");
+    marines[0] = new Marine(2, 3, "Marine 5", 10);
+    marines[1] = new Marine(3, 5, "Marine 2", 10);
+    marines[2] = new Marine(5, 5, "Marine 3", 10);
 
     marines[0]->show_status();
     marines[1]->show_status();
@@ -104,6 +104,10 @@ int main() {
     marines[0]->show_status();
     marines[1]->show_status();
 
+    Marine::show_total_marine();
+    
     delete marines[0];
     delete marines[1];
+
+    //reference를 리턴하는 함수?
 }
