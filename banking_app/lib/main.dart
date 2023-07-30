@@ -70,6 +70,7 @@ class App extends StatelessWidget {
                 height: 25,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -85,6 +86,25 @@ class App extends StatelessWidget {
                         'Transer',
                         style: TextStyle(
                           fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1F2123),
+                      borderRadius: BorderRadius.circular(45),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 15,
+                      ),
+                      child: Text(
+                        'Request',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
                         ),
                       ),
                     ),
