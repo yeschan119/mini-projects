@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
 
 class CurrencyCard extends StatelessWidget {
-  const CurrencyCard({super.key});
+  final String currency;
+  final Color currencyColor;
+  final String rate;
+  final Color rateColor;
+  final String currencyUnit;
+  final Color currencyUnitColor;
+  final Color backgroundColor;
+  final Icon icons;
+
+  const CurrencyCard({
+    super.key,
+    required this.currency,
+    required this.currencyColor,
+    required this.rate,
+    required this.rateColor,
+    required this.currencyUnit,
+    required this.currencyUnitColor,
+    required this.backgroundColor,
+    required this.icons,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: const Color(0xFF1F2123),
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
@@ -22,10 +41,10 @@ class CurrencyCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Euro',
+                Text(
+                  currency,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: currencyColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
@@ -36,20 +55,20 @@ class CurrencyCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '6 428',
+                      rate,
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white.withOpacity(0.8),
+                        color: rateColor.withOpacity(0.8),
                       ),
                     ),
                     const SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'EUR',
+                      currencyUnit,
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white.withOpacity(0.5),
+                        color: currencyUnitColor.withOpacity(0.5),
                       ),
                     ),
                   ],
@@ -60,11 +79,7 @@ class CurrencyCard extends StatelessWidget {
               scale: 2,
               child: Transform.translate(
                 offset: const Offset(-5, 10),
-                child: const Icon(
-                  Icons.euro_rounded,
-                  color: Colors.white,
-                  size: 85,
-                ),
+                child: icons,
               ),
             ),
           ],
