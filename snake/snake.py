@@ -23,7 +23,7 @@ class Snake:
     
     def add_segment(self, position):
         segment = Turtle(shape="square")
-        segment.shapesize(0.7, 1)
+        segment.shapesize(0.8, 0.8)
         segment.color("white")
         segment.penup()  #penup() 메서드는 0, 0에서 이동할 때 이동경로에 따라 그어지는 선을 없앨 때 사용
         segment.goto(position) #goto()는 주어진 좌표로 이동

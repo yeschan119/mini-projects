@@ -10,7 +10,7 @@ class Scoreboard(Turtle):
         self.score = 0
         self.color("white")
         self.penup()
-        self.goto(0, 270)
+        self.goto(0, 315)
         self.hideturtle()   #hideturtle()을 해주면  turtle객체를 가져다 쓰면서 turtle이 화면이 안보이게 함
         self.update_scoreboard()
     

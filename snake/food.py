@@ -9,12 +9,12 @@ class Food(Turtle):
         super().__init__()
         self.shape("turtle")
         self.penup()
-        self.shapesize(stretch_len=0.5, stretch_wid=0.5) #shapesize는 default가 20  x 20인데 10  x 10으로 하고 싶다는 것
+        self.shapesize(stretch_len=0.6, stretch_wid=0.6) #shapesize는 default가 20  x 20인데 10  x 10으로 하고 싶다는 것
         self.color("blue")
         self.speed("fastest")
         self.refresh()
         
     def refresh(self):
-        random_x = random.randint(-270, 270)
-        random_y = random.randint(-270, 270)
+        random_x = random.randint(-310, 310)
+        random_y = random.randint(-310, 310)
         self.goto(random_x, random_y)

@@ -18,7 +18,7 @@ import time
 ## detect collision with tail
 
 screen = Screen() #display the screen
-screen.setup(width=600, height=600)
+screen.setup(width=700, height=700)
 screen.bgcolor("black")
 screen.title("My Snake Game")
 
@@ -52,7 +52,7 @@ while game_is_on:
         
     #detect collision with wall
     #xcor(), ycor()는 해당 turtle객체가 있는 좌표를 리턴
-    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
+    if snake.head.xcor() > 340 or snake.head.xcor() < -340 or snake.head.ycor() > 340 or snake.head.ycor() < -340:
         game_is_on = False
         score.game_over()
     
