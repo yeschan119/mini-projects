@@ -4,8 +4,8 @@ mini projects
 ## snake game(python)
 ### python으로 뱀게임 만들기
 + break the problem
-  + board 생성 api
   + snake 생성 api
+  + scoreboard 생성 api
   + food 생성 api
   + main 함수
 ## quize game
