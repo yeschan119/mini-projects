@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 ///runApp은 widget을 인자로 받는다.
 ///widget은 레고블록 같은 것. widget을 쌓아서 앱을 완성
 ///프로그래밍 관점에서 widget을 만든다는 건 class를 생성한다는 것
+///class를 생성할 때 보통 new를 붙이지만 dart은 new 생랼 가능
 void main() {
   runApp(const App());
 }
@@ -21,7 +22,9 @@ class App extends StatelessWidget {
   ///build method는 둘 중 하나를 리턴해야 함
   ///material(GOOGLE) & cupertino(APPLE)
   ///물론 원하는 스타일은 customized app이지만 일단 시작점은 뭐로 할지 정해야 함
-  ///둘 중 하나를 정한다고 해서 꼭 그 스타일대로만 나오지 않음
+  ///둘 중 하나를 정한다고 해서 꼭 그 스타일 대로만 나오지 않음
+  ///
+  ///setting.json에 “dart.previewFlutterUiGuides” : true 설정하면 guide line이 나옴
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,6 +32,7 @@ class App extends StatelessWidget {
       ///home의 시작은 보통 scaffold로 함. scaffold는 모든 앱의 구조를 나타냄.
       ///즉, 건물의 뼈대 같은 것이고 이것이 있어야 그 안에 이것저것을 꾸밀 수 있음(body, appbar ..)
       home: Scaffold(
+        ///Colors.red.shade100와 같은 방법으로 쓸 수도 있음. 색깔을 먼저 찾고 밝기 설정
         backgroundColor: const Color(0xFF181818),
         body: SingleChildScrollView(
           child: Padding(
@@ -36,13 +40,16 @@ class App extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                ///sizedBox는 말 그대로 일정한 사이즈의 빈 박스입. 이걸 사이에 넣어서 공간을 만들어줌
                 const SizedBox(
                   height: 80,
                 ),
                 Row(
+                  ///mainAxisAlignment는 수평방향에서 위치를 정할 때 사용
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(
+                      ///crossAxisAlignment는 수직방향에서 위치를 정할 때 사용(row)
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
