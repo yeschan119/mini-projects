@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 1,
             child: Row(
               children: [
-                //row를 확면 끝까지 펼치게 하는 widget
+                //row를 화면 끝까지 펼치게 하는 widget
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
