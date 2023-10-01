@@ -34,6 +34,8 @@ class App extends StatelessWidget {
       home: Scaffold(
         ///Colors.red.shade100와 같은 방법으로 쓸 수도 있음. 색깔을 먼저 찾고 밝기 설정
         backgroundColor: const Color(0xFF181818),
+
+        ///내용이 화면 사이즈를 넘어설 때 스크롤로 내려 볼 수 있도록 하는 위젯
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -150,40 +152,39 @@ class App extends StatelessWidget {
                     color: Colors.white,
                     size: 85,
                   ),
+                  cardOffset: Offset(0, 0),
                 ),
-                Transform.translate(
-                  offset: const Offset(0, -10),
-                  child: const CurrencyCard(
-                    currency: 'Bitcoin',
-                    currencyColor: Colors.black,
-                    rate: '9 785',
-                    rateColor: Colors.black,
-                    currencyUnit: 'BTC',
-                    currencyUnitColor: Colors.black,
-                    backgroundColor: Colors.white,
-                    icons: Icon(
-                      Icons.currency_bitcoin_rounded,
-                      color: Colors.black,
-                      size: 85,
-                    ),
+
+                ///widget들을 겹치에 하기 위해 부모와 상관 없이 움직이도록 해야 하므로 transform 사용
+                const CurrencyCard(
+                  currency: 'Bitcoin',
+                  currencyColor: Colors.black,
+                  rate: '9 785',
+                  rateColor: Colors.black,
+                  currencyUnit: 'BTC',
+                  currencyUnitColor: Colors.black,
+                  backgroundColor: Colors.white,
+                  icons: Icon(
+                    Icons.currency_bitcoin_rounded,
+                    color: Colors.black,
+                    size: 85,
                   ),
+                  cardOffset: Offset(0, -10),
                 ),
-                Transform.translate(
-                  offset: const Offset(0, -10),
-                  child: const CurrencyCard(
-                    currency: 'Dollar',
-                    currencyColor: Colors.white,
-                    rate: '428',
-                    rateColor: Colors.white,
-                    currencyUnit: 'USD',
-                    currencyUnitColor: Colors.white,
-                    backgroundColor: Color(0xFF1F2123),
-                    icons: Icon(
-                      Icons.attach_money_rounded,
-                      color: Colors.white,
-                      size: 85,
-                    ),
+                const CurrencyCard(
+                  currency: 'Dollar',
+                  currencyColor: Colors.white,
+                  rate: '428',
+                  rateColor: Colors.white,
+                  currencyUnit: 'USD',
+                  currencyUnitColor: Colors.white,
+                  backgroundColor: Color(0xFF1F2123),
+                  icons: Icon(
+                    Icons.attach_money_rounded,
+                    color: Colors.white,
+                    size: 85,
                   ),
+                  cardOffset: Offset(0, -10),
                 ),
               ],
             ),
