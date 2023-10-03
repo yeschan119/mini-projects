@@ -16,4 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
   + result
 
-<img width="362" alt="pomodoro_app" src="https://github.com/yeschan119/mini-projects/assets/83147205/83733088-42f8-4066-942b-2db936561b92">
+<img width="362" alt="pomodoro_app" src="https://github.com/yeschan119/mini-projects/assets/83147205/04a88667-3707-4304-bf6d-1f1452618d60">
