@@ -1,6 +1,17 @@
 # pomodoro
-
-A new Flutter project.
+## pomodoro app(flutter)
+pomodoro는 25분 동안 일하고 5분 쉬는 작업 패턴을 의미하고, pomodoro app은 이 패턴을 도와주는 어플리케이션이다.
++ break the problem
+  + background UI 생성
+  + background 위에 필요한 아이템(timer, button, text) 생성
+  + 각 item에 반응할 수 있는 함수 구현 및 UI 연동 진행
++ 동작방식
+  + start button 클릭
+    + 타이머가 1초씩 증가하여 25분까지 증가
+    + 25분마다 pomodoro가 1씩 증가하고 멈춤
+    + 다시 시작할 때 start button click
+  + 중간에 멈추려면 pause button 클릭
+  + 처음으로 reset하고 싶으면 reset button 클릭
 
 ## Getting Started
 + design UI
