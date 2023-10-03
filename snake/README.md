@@ -1,4 +1,4 @@
-# banking_app
+# snake
 
 A new Flutter project.
 
@@ -14,6 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-  + result of UI
+  + result
+
     
 ![banking_app_UI](https://github.com/yeschan119/mini-projects/assets/83147205/459c1651-b101-482d-a7ff-f4521b35e29f)
+
+<img width="690" alt="snake" src="https://github.com/yeschan119/mini-projects/assets/83147205/4b73ae8e-a563-4d07-a7b6-3fefa7742385">
