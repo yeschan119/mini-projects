@@ -1,9 +1,9 @@
 # mini-projects
 mini projects
 # 시간 날 때마다 깨작깨작 뭔가를 만들어 보기
-## 💰banking app(flutter)
+## 💰 banking app(flutter)
 실시간으로 환율을 체크할 수 있는 앱 만들기
-## 🐍snake game(python)
+## 🐍 snake game(python)
 python으로 뱀게임 만들기
 + break the problem
   + snake 생성 api
