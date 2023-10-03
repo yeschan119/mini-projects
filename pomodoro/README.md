@@ -14,6 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-  + result of UI
-    
-![banking_app_UI](https://github.com/yeschan119/mini-projects/assets/83147205/459c1651-b101-482d-a7ff-f4521b35e29f)
+  + result
+
+<img width="362" alt="pomodoro" src="https://github.com/yeschan119/mini-projects/assets/83147205/8346192d-9b0d-49f2-8484-76999e290e72">
