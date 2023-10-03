@@ -16,6 +16,16 @@ pomodoro는 25분 동안 일하고 5분 쉬는 작업 패턴을 의미하고, po
   + background UI 생성
   + background 위에 필요한 아이템(timer, button, text) 생성
   + 각 item에 반응할 수 있는 함수 구현 및 UI 연동 진행
+##pong game(python)
+python으로 pong game을 만들어보기
++ break the problem
+  + Create the screen
+  + create and move a paddle
+  + create another paddle
+  + create the ball and make it move
+  + detect collision with all and bounce
+  + detect when paddle misses
+  + keep score
 ## quize game
 + Python
 ## Turtle game
