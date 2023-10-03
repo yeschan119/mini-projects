@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async'; //solve the timer error
 
-int TOTAL_TIME = 10; //1500s = 25min
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,7 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int totalSeconds = TOTAL_TIME;
+  static const twentyFiveMinutes = 1500; //25min = 1500s
+  int totalSeconds = twentyFiveMinutes;
   bool isRunning = false;
   int pomodoros = 0;
 
@@ -25,9 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
     } else {
       setState(() {
         pomodoros = pomodoros + 1;
-        totalSeconds = TOTAL_TIME;
+        totalSeconds = twentyFiveMinutes;
         isRunning = false;
       });
+
+      ///timer.cancel을 해주어야 timer가 다시 작동하지 않고 다음 명령을 기다리면서 멈춤
       timer.cancel();
     }
   }
@@ -47,6 +48,22 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void onResetPressed() {
+    setState(() {
+      totalSeconds = twentyFiveMinutes;
+      pomodoros = 0;
+      isRunning = false;
+    });
+    timer.cancel();
+  }
+
+  String secondsToMinutes(int seconds) {
+    ///Duration은 초를 받아서 분을 리턴해줌
+    ///duration은 00:25:00.000000 이런식으로 표시되므로 앞뒤를 잘라서 분:초만 보여주도록 삽질
+    var duration = Duration(seconds: seconds);
+    return duration.toString().split(".").first.substring(2, 7);
+  }
+
   @override
   Widget build(BuildContext context) {
     //scaffold는 material design(google식 design)의 layout
@@ -58,12 +75,12 @@ class _HomeScreenState extends State<HomeScreen> {
           //flexible is a relative ratio(flex:1) size. not absolute. no need 10px ..
           ///flexible은 상대적 사이즈이므로 사이즈가 아닌 비율(flex)을 입력한다.
           Flexible(
-            flex: 1,
+            flex: 2,
             child: Container(
               ///alignment는 container의 위치를 설정
               alignment: Alignment.bottomCenter,
               child: Text(
-                '$totalSeconds',
+                secondsToMinutes(totalSeconds),
                 style: TextStyle(
                   color: Theme.of(context).cardColor,
                   fontSize: 89,
@@ -73,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Flexible(
-            flex: 3,
+            flex: 4,
             child: Center(
               child: IconButton(
                 iconSize: 120,
@@ -92,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Flexible(
-            flex: 1,
+            flex: 2,
             child: Row(
               children: [
                 //row를 화면 끝까지 펼치게 하는 widget
@@ -105,8 +122,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        const SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Pomodoros',
                           style: TextStyle(
@@ -116,6 +136,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   .displayLarge!
                                   .color,
                               fontWeight: FontWeight.w600),
+                        ),
+                        const SizedBox(
+                          height: 10,
                         ),
                         Text(
                           '$pomodoros',
@@ -127,6 +150,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   .color,
                               fontWeight: FontWeight.w600),
                         ),
+                        IconButton(
+                            iconSize: 60,
+                            color: Theme.of(context).colorScheme.background,
+                            onPressed: onResetPressed,
+                            icon: const Icon(Icons.restore_outlined)),
                       ],
                     ),
                   ),
