@@ -1,4 +1,4 @@
-# banking_app
+# pomodoro
 
 A new Flutter project.
 
