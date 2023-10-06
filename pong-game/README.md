@@ -1,17 +1,14 @@
-# snake
+# 🏓 pong game(python)
+python으로 pong game을 만들어보기
++ break the problem
+  + Create the screen
+  + create and move a paddle
+  + create another paddle
+  + create the ball and make it move
+  + detect collision with all and bounce
+  + detect when paddle misses
+  + keep score
 
-A new python project.
+# result
 
-## Getting Started
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-  + result
-
-<img width="690" alt="snake" src="https://github.com/yeschan119/mini-projects/assets/83147205/05acad32-8283-4cd4-81ef-4e4e5a483889">
+<img width="792" alt="pong" src="https://github.com/yeschan119/mini-projects/assets/83147205/e2ffc130-cf45-41c6-bee6-d15e7766ba08">
