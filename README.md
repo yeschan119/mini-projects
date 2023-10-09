@@ -27,6 +27,16 @@ python으로 pong game을 만들어보기
   + detect collision with all and bounce
   + detect when paddle misses
   + keep score
+## 🚗 car game(python)
+python으로 road crossing game 만들기
++ break the problem
+  + Create the screen
+  + create player(turtle)
+  + create & move cars
+  + create main & import other apis
+  + detect collision with cars and finish line
+  + create scoreboard
+  + add game over
 ## quize game
 + Python
 ## Turtle game
