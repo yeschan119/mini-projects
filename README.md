@@ -37,6 +37,9 @@ python으로 road crossing game 만들기
   + detect collision with cars and finish line
   + create scoreboard
   + add game over
+## 🇺🇸 us states map game(python)
+미국 지도위에 각 주들의 이름을 입력할 때마다 주들이 표시되는 게임.
++ break the problem
 ## quize game
 + Python
 ## Turtle game
