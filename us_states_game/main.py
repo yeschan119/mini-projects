@@ -33,10 +33,9 @@ while True:
     if input_state.title() in state_list:
         right_answer_cnt += 1
         guessed_state = states_info[states_info.state == input_state.title()]
+        show_states.paint_state(border_info[input_state.title()])
         show_states.write_state_name(state_name=input_state.title(),
                                     posx=int(guessed_state.x), posy=int(guessed_state.y))
-        
-        show_states.paint_state(border_info[input_state.title()])
         guessed_state_list.append(input_state)
         
 remained_data = pandas.DataFrame(remained_states)

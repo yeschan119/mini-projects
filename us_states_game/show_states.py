@@ -11,6 +11,7 @@ class ShowState(Turtle):
         self.write(state_name)
         
     def paint_state(self, border_list):
+        self.penup()
         self.goto(border_list[0][0], border_list[0][1])
         self.pendown()
         self.fillcolor("yellow")
