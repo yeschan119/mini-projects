@@ -2,18 +2,13 @@
 
 A new python project.
 
-## 🚗 car game(python)
-python으로 road crossing game 만들기
-+ 꼬부기 한마리가 차들이 지나다니는 도로를 건너는 게임
-+ 도로를 다 건너면 level up
-+ 중간에 차와 부딪히면 game over
+## 🇺🇸 us states map game(python)
+미국 지도위에 각 주들의 이름을 입력할 때마다 주들이 표시되는 게임.
+한국 지도로 하려 했으나 적합한 지도를 찾지 못함ㅠ
 + break the problem
-  + Create the screen
-  + create player(turtle)
-  + create & move cars
-  + create main & import other apis
-  + detect collision with cars and finish line
-  + create scoreboard
-  + add game over
+  + 필요한 데이터를 불러옴(지도)
+  + 지도를 이용하여 각 주들의 좌표 생성
+  + 주들의 이름을 입력할 수 있는 입력창 생성
+  + 이름을 입력할 때마다 주들을 표시해줄 수 있는 API 생성
 
-<img width="597" alt="car" src="https://github.com/yeschan119/mini-projects/assets/83147205/8396394e-b6ec-4733-aef9-350691ceb468">
+![us_states](https://github.com/yeschan119/mini-projects/assets/83147205/8476101f-cbea-4364-b3ec-283a718aa613)
