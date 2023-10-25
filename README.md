@@ -40,6 +40,10 @@ python으로 road crossing game 만들기
 ## 🇺🇸 us states map game(python)
 미국 지도위에 각 주들의 이름을 입력할 때마다 주들이 표시되는 게임.
 + break the problem
+  + 필요한 데이터를 불러옴(지도)
+  + 지도를 이용하여 각 주들의 좌표 생성
+  + 주들의 이름을 입력할 수 있는 입력창 생성
+  + 이름을 입력할 때마다 주들을 표시해줄 수 있는 API 생성
 ## quize game
 + Python
 ## Turtle game
