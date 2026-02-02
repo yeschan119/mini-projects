@@ -3,7 +3,7 @@ Mini Projects
 
 # Building small things whenever I have spare time
 
-# [한국어 🇰🇷](README.ko.md)
+## [한국어 🇰🇷](README.ko.md)
 
 ## 💰 Banking App (Flutter)
 Build an app that allows users to check real-time exchange rates
