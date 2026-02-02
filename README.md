@@ -1,52 +1,64 @@
 # mini-projects
-mini projects
-# 시간 날 때마다 깨작깨작 뭔가를 만들어 보기
-## 💰 banking app(flutter)
-실시간으로 환율을 체크할 수 있는 앱 만들기
-## 🐍 snake game(python)
-python으로 뱀게임 만들기
-+ break the problem
-  + snake 생성 api
-  + scoreboard 생성 api
-  + food 생성 api
-  + main 함수에서 각 API연동 및 실행
-## ⏰ pomodoro app(flutter)
-pomodoro는 25분 동안 일하고 5분 쉬는 작업 패턴을 의미하고, pomodoro app은 이 패턴을 도와주는 어플리케이션이다.
-+ break the problem
-  + background UI 생성
-  + background 위에 필요한 아이템(timer, button, text) 생성
-  + 각 item에 반응할 수 있는 함수 구현 및 UI 연동 진행
+Mini Projects
 
-## 🏓 pong game(python)
-python으로 pong game을 만들어보기
-+ break the problem
+# Building small things whenever I have spare time
+
+# [한국어 🇰🇷](README.ko.md)
+
+## 💰 Banking App (Flutter)
+Build an app that allows users to check real-time exchange rates
+
+## 🐍 Snake Game (Python)
+Build a snake game using Python
++ Break the problem
+  + Create a snake generation API
+  + Create a scoreboard API
+  + Create a food generation API
+  + Integrate and execute all APIs in the main function
+
+## ⏰ Pomodoro App (Flutter)
+Pomodoro refers to a work pattern of working for 25 minutes and resting for 5 minutes.  
+A Pomodoro app is an application that helps users follow this pattern.
++ Break the problem
+  + Create the background UI
+  + Create required items on the background (timer, buttons, text)
+  + Implement functions that respond to each item and connect them to the UI
+
+## 🏓 Pong Game (Python)
+Build a pong game using Python
++ Break the problem
   + Create the screen
-  + create and move a paddle
-  + create another paddle
-  + create the ball and make it move
-  + detect collision with all and bounce
-  + detect when paddle misses
-  + keep score
-## 🚗 car game(python)
-python으로 road crossing game 만들기
-+ break the problem
+  + Create and move a paddle
+  + Create another paddle
+  + Create the ball and make it move
+  + Detect collisions with walls and bounce
+  + Detect when a paddle misses the ball
+  + Keep score
+
+## 🚗 Car Game (Python)
+Build a road-crossing game using Python
++ Break the problem
   + Create the screen
-  + create player(turtle)
-  + create & move cars
-  + create main & import other apis
-  + detect collision with cars and finish line
-  + create scoreboard
-  + add game over
-## 🇺🇸 us states map game(python)
-미국 지도위에 각 주들의 이름을 입력할 때마다 주들이 표시되는 게임.
-+ break the problem
-  + 필요한 데이터를 불러옴(지도)
-  + 지도를 이용하여 각 주들의 좌표 생성
-  + 주들의 이름을 입력할 수 있는 입력창 생성
-  + 이름을 입력할 때마다 주들을 표시해줄 수 있는 API 생성
-## quize game
+  + Create the player (turtle)
+  + Create and move cars
+  + Create the main module and import other APIs
+  + Detect collisions with cars and the finish line
+  + Create a scoreboard
+  + Add game over logic
+
+## 🇺🇸 US States Map Game (Python)
+A game where U.S. states are displayed on a map as the user enters their names.
++ Break the problem
+  + Load the required data (map)
+  + Generate coordinates for each state using the map
+  + Create an input box for entering state names
+  + Create an API that displays states as names are entered
+
+## Quiz Game
 + Python
-## Turtle game
+
+## Turtle Game
 + Python
-## starcraft game
+
+## StarCraft Game
 + C++
